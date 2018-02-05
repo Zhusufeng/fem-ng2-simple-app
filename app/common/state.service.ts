@@ -11,4 +11,8 @@ export class StateService {
   setMessage(newMessage: string): void {
     this._message = newMessage;
   };
+
+  logMessage(newMessage: string): void {
+    console.log('Logging new message: ', newMessage);
+  }
 }
