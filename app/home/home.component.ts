@@ -8,6 +8,7 @@ import {StateService} from '../common/state.service';
 export class HomeComponent implements OnInit {
   title: string = 'Home Page';
   body:  string = 'This is the about home body';
+  greeting: string = 'Hello welcome! This is my property';
   message: string;
 
   constructor(private _stateService: StateService) { }
@@ -18,5 +19,9 @@ export class HomeComponent implements OnInit {
 
   updateMessage(m: string): void {
     this._stateService.setMessage(m);
+  }
+
+  logMessage(m: string): void {
+    this._stateService.logMessage(m);
   }
 }
